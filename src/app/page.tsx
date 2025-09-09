@@ -10,7 +10,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
           <span className="text-lg font-semibold">Candle Yoga</span>
           <div className="flex gap-2">
-            <Link href="#schedule">
+            <Link href="#where-when">
               <Button variant="outline">Schedule</Button>
             </Link>
             <Link
@@ -85,8 +85,11 @@ export default function Home() {
               complete beginners and experienced practitioners.
             </p>
             <div className="mt-8 flex gap-3">
-              <Link href="#schedule">
-                <Button variant="outline" className="text-white border-white">
+              <Link href="#where-when">
+                <Button
+                  variant="secondary"
+                  className="bg-white text-[#101115] hover:bg-white/90"
+                >
                   View schedule
                 </Button>
               </Link>
@@ -179,36 +182,6 @@ export default function Home() {
               mat; optional water and a warm layer.
             </li>
           </ul>
-        </section>
-
-        <section id="gallery" className="space-y-6">
-          <h2 className="text-3xl sm:text-4xl font-semibold">Gallery</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <Image
-              src="/images/candle-class.webp"
-              alt="Candlelit evening yoga class in St. Anthony’s Hall"
-              width={900}
-              height={600}
-              className="h-48 w-full object-cover rounded-lg"
-              sizes="(min-width: 1024px) 33vw, 50vw"
-            />
-            <Image
-              src="/images/chuch-day.webp"
-              alt="St. Anthony’s Hall exterior during the day"
-              width={900}
-              height={600}
-              className="h-48 w-full object-cover rounded-lg"
-              sizes="(min-width: 1024px) 33vw, 50vw"
-            />
-            <Image
-              src="/images/Yoga Picture from Unsplash.jpg"
-              alt="Person practicing yoga pose on mat"
-              width={900}
-              height={600}
-              className="h-48 w-full object-cover rounded-lg"
-              sizes="(min-width: 1024px) 33vw, 50vw"
-            />
-          </div>
         </section>
 
         <section id="contact" className="space-y-4">

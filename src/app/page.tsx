@@ -1,102 +1,246 @@
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="font-sans">
+      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur border-b">
+        <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
+          <span className="text-lg font-semibold">Candle Yoga</span>
+          <div className="flex gap-2">
+            <Link href="#schedule">
+              <Button variant="outline">Schedule</Button>
+            </Link>
+            <Link
+              href="https://chat.whatsapp.com/CwzzpKBZvPwHMV7gN5vMJl?mode=ems_copy_c"
+              target="_blank"
+            >
+              <Button className="bg-primary text-background">
+                Join WhatsApp
+              </Button>
+            </Link>
+          </div>
         </div>
+      </header>
+
+      <section className="bg-background">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:py-28 grid gap-10 md:grid-cols-2 items-center">
+          <div>
+            <h1 className="text-4xl sm:text-6xl font-semibold">
+              Candle Yoga in Clontarf
+            </h1>
+            <p className="mt-6 text-lg sm:text-xl max-w-prose">
+              A warm, candlelit vinyasa flow for all levels. Mondays 7:45–8:45pm
+              at St. Anthony’s Hall.
+            </p>
+            <div className="mt-8 flex gap-3">
+              <Link
+                href="https://chat.whatsapp.com/CwzzpKBZvPwHMV7gN5vMJl?mode=ems_copy_c"
+                target="_blank"
+              >
+                <Button size="lg" className="bg-primary text-background">
+                  Join WhatsApp
+                </Button>
+              </Link>
+              <a href="mailto:charlieward18@gmail.com">
+                <Button size="lg" variant="outline">
+                  Email
+                </Button>
+              </a>
+            </div>
+          </div>
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
+            <Image
+              src="/images/yoga-field.webp"
+              alt="Yoga mat on a field with warm candlelit tones"
+              fill
+              priority
+              className="object-cover"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#101115] text-white">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:py-28 grid gap-12 md:grid-cols-2 items-center">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
+            <Image
+              src="/images/candle-class.webp"
+              alt="Candlelit evening yoga class in St. Anthony’s Hall"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+            />
+          </div>
+          <div>
+            <h2 className="text-3xl sm:text-5xl font-semibold">
+              Why Candle Yoga?
+            </h2>
+            <p className="mt-6 text-base sm:text-lg text-white/80 max-w-prose">
+              Gentle, calming and spacious. Move, breathe and unwind in a
+              beautiful, repurposed church hall by the sea. Suitable for
+              complete beginners and experienced practitioners.
+            </p>
+            <div className="mt-8 flex gap-3">
+              <Link href="#schedule">
+                <Button variant="outline" className="text-white border-white">
+                  View schedule
+                </Button>
+              </Link>
+              <Link
+                href="https://maps.app.goo.gl/qETiqWa7L5dr5RWTA"
+                target="_blank"
+              >
+                <Button className="bg-primary text-background">
+                  Open in Maps
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main className="mx-auto max-w-6xl px-4 py-20 sm:py-28 space-y-20 sm:space-y-28">
+        <section
+          id="instructor"
+          className="grid gap-10 md:grid-cols-2 items-center"
+        >
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
+            <Image
+              src="/images/Yoga Picture from Unsplash.jpg"
+              alt="Mary Duffy guiding a yoga pose"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+            />
+          </div>
+          <div>
+            <h2 className="text-3xl sm:text-5xl font-semibold">
+              Meet your instructor
+            </h2>
+            <p className="mt-6 text-base sm:text-lg max-w-prose">
+              Mary Duffy is a certified yoga instructor trained in Goa, India,
+              and a chartered psychologist. Her classes are uplifting,
+              supportive and community-focused, offering options for complete
+              beginners to experienced practitioners.
+            </p>
+          </div>
+        </section>
+
+        <section className="rounded-2xl bg-[#101115] text-white p-8 sm:p-12 grid gap-10 md:grid-cols-2 items-center">
+          <div>
+            <h2 className="text-3xl sm:text-5xl font-semibold">The space</h2>
+            <p className="mt-6 text-base sm:text-lg text-white/80 max-w-prose">
+              Candlelit yoga in a high-ceilinged, beautifully repurposed church
+              hall by the sea. Soft light, generous space and calm atmosphere
+              help you settle your breath and unwind.
+            </p>
+          </div>
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
+            <Image
+              src="/images/candle-class.webp"
+              alt="Candlelit yoga session in the high-ceilinged hall"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+            />
+          </div>
+        </section>
+
+        <section id="where-when" className="grid gap-8">
+          <h2 className="text-3xl sm:text-4xl font-semibold">Where & when</h2>
+          <ul className="grid gap-4 text-base sm:text-lg">
+            <li>
+              <span className="font-medium">Location:</span> St. Anthony’s Hall,
+              Clontarf Rd, Dublin 3, D03 TY23.{' '}
+              <Link
+                href="https://maps.app.goo.gl/qETiqWa7L5dr5RWTA"
+                target="_blank"
+                className="underline"
+              >
+                Open in Maps
+              </Link>
+              . Not to be confused with St. Anthony’s House (smaller space
+              within the same grounds, not on the seafront).
+            </li>
+            <li>
+              <span className="font-medium">Time:</span> Mondays 7:45–8:45pm
+              (six-week series from 29 Sep 2025).
+            </li>
+            <li>
+              <span className="font-medium">Parking:</span> Free parking via St.
+              Lawrence’s Road.
+            </li>
+            <li>
+              <span className="font-medium">What to bring:</span> Your own yoga
+              mat; optional water and a warm layer.
+            </li>
+          </ul>
+        </section>
+
+        <section id="gallery" className="space-y-6">
+          <h2 className="text-3xl sm:text-4xl font-semibold">Gallery</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <Image
+              src="/images/candle-class.webp"
+              alt="Candlelit evening yoga class in St. Anthony’s Hall"
+              width={900}
+              height={600}
+              className="h-48 w-full object-cover rounded-lg"
+              sizes="(min-width: 1024px) 33vw, 50vw"
+            />
+            <Image
+              src="/images/chuch-day.webp"
+              alt="St. Anthony’s Hall exterior during the day"
+              width={900}
+              height={600}
+              className="h-48 w-full object-cover rounded-lg"
+              sizes="(min-width: 1024px) 33vw, 50vw"
+            />
+            <Image
+              src="/images/Yoga Picture from Unsplash.jpg"
+              alt="Person practicing yoga pose on mat"
+              width={900}
+              height={600}
+              className="h-48 w-full object-cover rounded-lg"
+              sizes="(min-width: 1024px) 33vw, 50vw"
+            />
+          </div>
+        </section>
+
+        <section id="contact" className="space-y-4">
+          <h2 className="text-3xl sm:text-4xl font-semibold">Stay in touch</h2>
+          <p className="text-muted-foreground">
+            Join the WhatsApp group for updates or reach out directly.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="https://chat.whatsapp.com/CwzzpKBZvPwHMV7gN5vMJl?mode=ems_copy_c"
+              target="_blank"
+            >
+              <Button>Join WhatsApp</Button>
+            </Link>
+            <Link
+              href="https://instagram.com/come_yogawithmary"
+              target="_blank"
+            >
+              <Button variant="outline">Instagram</Button>
+            </Link>
+            <a href="mailto:charlieward18@gmail.com">
+              <Button variant="outline">Email</Button>
+            </a>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="border-t">
+        <div className="mx-auto max-w-6xl px-4 py-10 text-sm text-muted-foreground">
+          © {new Date().getFullYear()} Candle Yoga — St. Anthony’s Hall,
+          Clontarf
+        </div>
       </footer>
     </div>
   );

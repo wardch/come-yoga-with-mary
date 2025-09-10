@@ -202,8 +202,8 @@ export default function Home() {
                     St. Anthony's Hall, Clontarf Rd, Dublin 3, D03 TY23
                   </Link>
                   <span className="text-muted-foreground">
-                    {' '}
-                    (Not be confused with St. Anthony's House which is nearby.)
+                    {'  '}
+                    (Not be confused with St. Anthony's House which is nearby)
                   </span>{' '}
                   The venue is viewable from the seafront along the Clontarf
                   Road. The back door is the easiest way to access the hall.

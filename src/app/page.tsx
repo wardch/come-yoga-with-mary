@@ -107,7 +107,7 @@ export default function Home() {
         >
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
             <Image
-              src="/images/Yoga Picture from Unsplash.jpg"
+              src="/images/Yoga Picture from Unsplash.webp"
               alt="Mary Duffy guiding a yoga pose"
               fill
               className="object-cover"
@@ -222,7 +222,7 @@ export default function Home() {
               size="lg"
               className="bg-primary text-background hover:bg-primary/90"
             >
-              Book Class
+              Reserve
             </Button>
           </Link>
         </section>

@@ -204,8 +204,8 @@ export default function Home() {
                   <span className="text-muted-foreground">
                     {' '}
                     (Not be confused with St. Anthony's House which is nearby.)
-                  </span>
-                  . The venue is viewable from the seafront along the Clontarf
+                  </span>{' '}
+                  The venue is viewable from the seafront along the Clontarf
                   Road. The back door is the easiest way to access the hall.
                 </p>
               </div>

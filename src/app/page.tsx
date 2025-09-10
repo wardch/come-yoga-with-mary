@@ -232,6 +232,14 @@ export default function Home() {
                   provide mats if you don't have one.
                 </p>
               </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-3">Payment</h3>
+                <p className="text-base sm:text-lg">
+                  €15 per class. Book online through the links above, or we can
+                  handle payment in person if you prefer.
+                </p>
+              </div>
             </StaggeredAnimation>
             <ScrollAnimation direction="up" delay={0.6}>
               <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl">

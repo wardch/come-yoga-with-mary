@@ -5,16 +5,29 @@ import {Button} from '@/components/ui/button';
 export default function Home() {
   return (
     <div className="font-sans">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-primary-foreground px-4 py-2 rounded-md z-50"
+      >
+        Skip to main content
+      </a>
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur border-b">
         <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
           <span className="text-lg font-semibold">Candle Yoga</span>
-          <div className="flex gap-2">
-            <Link href="https://cal.com/wardch/candle-lit-yoga" target="_blank">
-              <Button className="bg-primary text-background">
+          <nav className="flex gap-2" aria-label="Main navigation">
+            <Link
+              href="https://cal.com/wardch/candle-lit-yoga"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                className="bg-primary text-background"
+                aria-label="Book a yoga class"
+              >
                 Book a class
               </Button>
             </Link>
-          </div>
+          </nav>
         </div>
       </header>
 
@@ -33,6 +46,8 @@ export default function Home() {
               <Link
                 href="https://cal.com/wardch/candle-lit-yoga"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Book a candle yoga class - opens in new tab"
               >
                 <Button size="lg" className="bg-primary text-background">
                   Book a class
@@ -43,7 +58,7 @@ export default function Home() {
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
             <Image
               src="/images/yoga-field.webp"
-              alt="Yoga mat on a field with warm candlelit tones"
+              alt="Peaceful yoga mat placed on a field with warm candlelit tones, representing the serene outdoor yoga experience"
               fill
               priority
               className="object-cover"
@@ -58,7 +73,7 @@ export default function Home() {
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
             <Image
               src="/images/candle-class.webp"
-              alt="Candlelit evening yoga class in St. Anthony’s Hall"
+              alt="Evening yoga class in St. Anthony's Hall with soft candlelight creating a peaceful, meditative atmosphere"
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -79,6 +94,8 @@ export default function Home() {
               <Link
                 href="https://cal.com/wardch/candle-lit-yoga"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Book a candle yoga class - opens in new tab"
               >
                 <Button
                   variant="secondary"
@@ -90,6 +107,8 @@ export default function Home() {
               <Link
                 href="https://maps.app.goo.gl/qETiqWa7L5dr5RWTA"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open St. Anthony's Hall location in Google Maps - opens in new tab"
               >
                 <Button className="bg-primary text-background">
                   Open in Maps
@@ -100,7 +119,10 @@ export default function Home() {
         </div>
       </section>
 
-      <main className="mx-auto max-w-6xl px-4 py-20 sm:py-28 space-y-20 sm:space-y-28">
+      <main
+        id="main-content"
+        className="mx-auto max-w-6xl px-4 py-20 sm:py-28 space-y-20 sm:space-y-28"
+      >
         <section
           id="instructor"
           className="grid gap-10 md:grid-cols-2 items-center"
@@ -108,7 +130,7 @@ export default function Home() {
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
             <Image
               src="/images/Yoga Picture from Unsplash.webp"
-              alt="Mary Duffy guiding a yoga pose"
+              alt="Mary Duffy, certified yoga instructor, demonstrating a yoga pose with calm and professional guidance"
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -272,8 +294,10 @@ export default function Home() {
 
       <footer className="border-t">
         <div className="mx-auto max-w-6xl px-4 py-10 text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Candle Yoga — St. Anthony’s Hall,
-          Clontarf
+          <p>
+            © {new Date().getFullYear()} Candle Yoga — St. Anthony's Hall,
+            Clontarf
+          </p>
         </div>
       </footer>
     </div>

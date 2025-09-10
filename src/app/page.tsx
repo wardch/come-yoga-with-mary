@@ -37,98 +37,91 @@ export default function Home() {
 
       <section className="bg-background">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:py-28 grid gap-10 md:grid-cols-2 items-center">
-          <ScrollAnimation direction="right" delay={0.2}>
-            <div>
-              <h1 className="text-4xl sm:text-6xl font-semibold">
-                Candle Yoga in Clontarf
-              </h1>
-              <p className="mt-6 text-lg sm:text-xl max-w-prose">
-                Immerse yourself in a serene vinyasa flow every Monday from 7:45
-                PM to 8:45 PM. Perfect for all levels, this class will
-                rejuvenate your body and mind under the soft glow of
-                candlelight.
-              </p>
-              <div className="mt-8 flex gap-3">
-                <Link
-                  href="https://cal.com/wardch/candle-lit-yoga"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Book a candle yoga class - opens in new tab"
-                >
-                  <Button size="lg" className="bg-primary text-background">
-                    Book a class
-                  </Button>
-                </Link>
-              </div>
+          <div>
+            <h1 className="text-4xl sm:text-6xl font-semibold">
+              Candle Yoga in Clontarf
+            </h1>
+            <p className="mt-6 text-lg sm:text-xl max-w-prose">
+              Immerse yourself in a serene vinyasa flow every Monday from 7:45
+              PM to 8:45 PM. Perfect for all levels, this class will rejuvenate
+              your body and mind under the soft glow of candlelight.
+            </p>
+            <div className="mt-8 flex gap-3">
+              <Link
+                href="https://cal.com/wardch/candle-lit-yoga"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Book a candle yoga class - opens in new tab"
+              >
+                <Button size="lg" className="bg-primary text-background">
+                  Book a class
+                </Button>
+              </Link>
             </div>
-          </ScrollAnimation>
-          <ScrollAnimation direction="left" delay={0.4}>
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
-              <Image
-                src="/images/yoga-field.webp"
-                alt="Peaceful yoga mat placed on a field with warm candlelit tones, representing the serene outdoor yoga experience"
-                fill
-                priority
-                className="object-cover"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-              />
-            </div>
-          </ScrollAnimation>
+          </div>
+
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
+            <Image
+              src="/images/yoga-field.webp"
+              alt="Peaceful yoga mat placed on a field with warm candlelit tones, representing the serene outdoor yoga experience"
+              fill
+              priority
+              className="object-cover"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+            />
+          </div>
         </div>
       </section>
 
       <section className="bg-[#101115] text-white">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:py-28 grid gap-12 md:grid-cols-2 items-center">
-          <ScrollAnimation direction="right" delay={0.2}>
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
-              <Image
-                src="/images/candle-class.webp"
-                alt="Evening yoga class in St. Anthony's Hall with soft candlelight creating a peaceful, meditative atmosphere"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-              />
-            </div>
-          </ScrollAnimation>
-          <ScrollAnimation direction="left" delay={0.4}>
-            <div>
-              <h2 className="text-3xl sm:text-5xl font-semibold">
-                Why Candle Yoga?
-              </h2>
-              <p className="mt-6 text-base sm:text-lg text-white/80 max-w-prose">
-                Experience yoga in a tranquil, candlelit setting every Monday
-                evening. Our vinyasa flow class is designed for all levels, from
-                beginners to seasoned practitioners. The gentle atmosphere and
-                soft lighting create an ideal space for relaxation, allowing you
-                to connect with your breath and body.
-              </p>
-              <div className="mt-8 flex gap-3">
-                <Link
-                  href="https://cal.com/wardch/candle-lit-yoga"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Book a candle yoga class - opens in new tab"
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
+            <Image
+              src="/images/candle-class.webp"
+              alt="Evening yoga class in St. Anthony's Hall with soft candlelight creating a peaceful, meditative atmosphere"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+            />
+          </div>
+
+          <div>
+            <h2 className="text-3xl sm:text-5xl font-semibold">
+              Why Candle Yoga?
+            </h2>
+            <p className="mt-6 text-base sm:text-lg text-white/80 max-w-prose">
+              Experience yoga in a tranquil, candlelit setting every Monday
+              evening. Our vinyasa flow class is designed for all levels, from
+              beginners to seasoned practitioners. The gentle atmosphere and
+              soft lighting create an ideal space for relaxation, allowing you
+              to connect with your breath and body.
+            </p>
+            <div className="mt-8 flex gap-3">
+              <Link
+                href="https://cal.com/wardch/candle-lit-yoga"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Book a candle yoga class - opens in new tab"
+              >
+                <Button
+                  variant="secondary"
+                  className="bg-white text-[#101115] hover:bg-white/90"
                 >
-                  <Button
-                    variant="secondary"
-                    className="bg-white text-[#101115] hover:bg-white/90"
-                  >
-                    Book a class
-                  </Button>
-                </Link>
-                <Link
-                  href="https://maps.app.goo.gl/qETiqWa7L5dr5RWTA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Open St. Anthony's Hall location in Google Maps - opens in new tab"
-                >
-                  <Button className="bg-primary text-background">
-                    Open in Maps
-                  </Button>
-                </Link>
-              </div>
+                  Book a class
+                </Button>
+              </Link>
+              <Link
+                href="https://maps.app.goo.gl/qETiqWa7L5dr5RWTA"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open St. Anthony's Hall location in Google Maps - opens in new tab"
+              >
+                <Button className="bg-primary text-background">
+                  Open in Maps
+                </Button>
+              </Link>
             </div>
-          </ScrollAnimation>
+          </div>
         </div>
       </section>
 
@@ -140,7 +133,7 @@ export default function Home() {
           id="instructor"
           className="grid gap-10 md:grid-cols-2 items-center"
         >
-          <ScrollAnimation direction="left" delay={0.2}>
+          <ScrollAnimation direction="up" delay={0.2}>
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
               <Image
                 src="/images/Yoga Picture from Unsplash.webp"
@@ -151,7 +144,7 @@ export default function Home() {
               />
             </div>
           </ScrollAnimation>
-          <ScrollAnimation direction="right" delay={0.4}>
+          <ScrollAnimation direction="up" delay={0.4}>
             <div>
               <h2 className="text-3xl sm:text-5xl font-semibold">
                 Meet your instructor
@@ -169,7 +162,7 @@ export default function Home() {
         </section>
 
         <section className="rounded-2xl bg-[#101115] text-white p-8 sm:p-12 grid gap-10 md:grid-cols-2 items-center">
-          <ScrollAnimation direction="right" delay={0.2}>
+          <ScrollAnimation direction="up" delay={0.2}>
             <div>
               <h2 className="text-3xl sm:text-5xl font-semibold">The space</h2>
               <p className="mt-6 text-base sm:text-lg text-white/80 max-w-prose">
@@ -179,7 +172,7 @@ export default function Home() {
               </p>
             </div>
           </ScrollAnimation>
-          <ScrollAnimation direction="left" delay={0.4}>
+          <ScrollAnimation direction="up" delay={0.4}>
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
               <Image
                 src="/images/candle-class.webp"

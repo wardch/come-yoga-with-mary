@@ -93,12 +93,6 @@ export function ScrollAnimation({
 }: ScrollAnimationProps) {
   const selectedVariants = variants[direction];
 
-  //frontenddebug
-  console.log('%c ScrollAnimation: %o', 'background: #1a1a2e; color: #ffd700', {
-    direction,
-    delay,
-  });
-
   return (
     <motion.div
       className={className}
@@ -157,13 +151,6 @@ export function StaggeredAnimation({
       },
     },
   };
-
-  //frontenddebug
-  console.log(
-    '%c StaggeredAnimation: %o',
-    'background: #2d1b69; color: #ff6b6b',
-    {staggerDelay}
-  );
 
   // Convert children to array if it's not already
   const childrenArray = Array.isArray(children) ? children : [children];

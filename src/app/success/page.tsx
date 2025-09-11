@@ -9,10 +9,52 @@ import {Suspense} from 'react';
 function SuccessContent() {
   const searchParams = useSearchParams();
 
-  const name = searchParams.get('name') || 'there';
+  const name =
+    searchParams.get('attendeeName') || searchParams.get('name') || 'there';
   const email = searchParams.get('email') || '';
   const date = searchParams.get('date') || '';
-  const time = searchParams.get('time') || '7:45 PM - 8:45 PM';
+  const startTime = searchParams.get('startTime') || '';
+  const endTime = searchParams.get('endTime') || '';
+  const location =
+    searchParams.get('location') ||
+    "St. Anthony's Hall, Clontarf Road, D03 TY23";
+  const title = 'Candle Lit Yoga with Mary Duffy';
+  const hostName = 'Mary Duffy';
+  const paymentIntent = searchParams.get('payment_intent') || '';
+  const redirectStatus = searchParams.get('redirect_status') || '';
+  const uid = searchParams.get('uid') || '';
+
+  const formatDateTime = (dateStr: string, timeStr: string) => {
+    if (!dateStr || !timeStr) return 'TBD';
+
+    try {
+      const date = new Date(dateStr);
+      const time = new Date(timeStr);
+
+      const formattedDate = date.toLocaleDateString('en-IE', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      });
+
+      const formattedTime = time.toLocaleTimeString('en-IE', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true,
+      });
+
+      return `${formattedDate} at ${formattedTime}`;
+    } catch (error) {
+      //frontenddebug
+      console.log(
+        '%c Date formatting error: %o',
+        'background: red; color: white',
+        error
+      );
+      return timeStr || 'TBD';
+    }
+  };
 
   return (
     <div className="font-sans min-h-screen bg-background">
@@ -69,6 +111,11 @@ function SuccessContent() {
             <p className="text-xl sm:text-2xl text-muted-foreground mb-8">
               Thank you,{' '}
               <span className="font-semibold text-foreground">{name}</span>!
+              {redirectStatus === 'succeeded' && (
+                <span className="block text-lg text-green-600 mt-2">
+                  Your payment has been processed successfully.
+                </span>
+              )}
             </p>
           </ScrollAnimation>
 
@@ -83,49 +130,69 @@ function SuccessContent() {
                   <span className="font-medium text-muted-foreground">
                     Class
                   </span>
-                  <span className="font-semibold">
-                    Candle Yoga - Vinyasa Flow
+                  <span className="font-semibold text-right">{title}</span>
+                </div>
+
+                <div className="flex justify-between items-center py-3 border-b border-border">
+                  <span className="font-medium text-muted-foreground">
+                    Date & Time
+                  </span>
+                  <span className="font-semibold text-right">
+                    {formatDateTime(date, startTime)}
                   </span>
                 </div>
 
                 <div className="flex justify-between items-center py-3 border-b border-border">
                   <span className="font-medium text-muted-foreground">
-                    Date
+                    Duration
                   </span>
-                  <span className="font-semibold">{date || 'Monday'}</span>
-                </div>
-
-                <div className="flex justify-between items-center py-3 border-b border-border">
-                  <span className="font-medium text-muted-foreground">
-                    Time
-                  </span>
-                  <span className="font-semibold">{time}</span>
+                  <span className="font-semibold">1 hour</span>
                 </div>
 
                 <div className="flex justify-between items-center py-3 border-b border-border">
                   <span className="font-medium text-muted-foreground">
                     Location
                   </span>
-                  <span className="font-semibold text-right">
-                    St. Anthony's Hall
-                    <br />
-                    Clontarf Rd, Dublin 3
-                  </span>
+                  <span className="font-semibold text-right">{location}</span>
                 </div>
 
                 <div className="flex justify-between items-center py-3 border-b border-border">
                   <span className="font-medium text-muted-foreground">
                     Instructor
                   </span>
-                  <span className="font-semibold">Mary Duffy</span>
+                  <span className="font-semibold">{hostName}</span>
                 </div>
 
-                <div className="flex justify-between items-center py-3">
+                {paymentIntent && (
+                  <div className="flex justify-between items-center py-3 border-b border-border">
+                    <span className="font-medium text-muted-foreground">
+                      Payment Status
+                    </span>
+                    <span className="font-semibold text-green-600 capitalize">
+                      {redirectStatus === 'succeeded'
+                        ? '✓ Paid'
+                        : redirectStatus}
+                    </span>
+                  </div>
+                )}
+
+                <div className="flex justify-between items-center py-3 border-b border-border">
                   <span className="font-medium text-muted-foreground">
                     Price
                   </span>
                   <span className="font-semibold">€15</span>
                 </div>
+
+                {uid && (
+                  <div className="flex justify-between items-center py-3">
+                    <span className="font-medium text-muted-foreground">
+                      Booking Reference
+                    </span>
+                    <span className="font-mono text-sm text-muted-foreground">
+                      {uid}
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
           </ScrollAnimation>

@@ -14,7 +14,7 @@ function SuccessContent() {
   const email = searchParams.get('email') || '';
   const date = searchParams.get('date') || '';
   const startTime = searchParams.get('startTime') || '';
-  const endTime = searchParams.get('endTime') || '';
+
   const location =
     searchParams.get('location') ||
     "St. Anthony's Hall, Clontarf Road, D03 TY23";
@@ -78,124 +78,110 @@ function SuccessContent() {
 
       <main className="mx-auto max-w-4xl px-4 py-20">
         <div className="text-center space-y-8">
-          <ScrollAnimation direction="up" delay={0.2}>
-            <div className="relative w-24 h-24 mx-auto mb-8">
-              <div className="absolute inset-0 bg-green-100 rounded-full flex items-center justify-center">
-                <svg
-                  className="w-12 h-12 text-green-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Checkmark icon"
-                  role="img"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-              </div>
+          <div className="relative w-24 h-24 mx-auto mb-8">
+            <div className="absolute inset-0 bg-green-100 rounded-full flex items-center justify-center">
+              <svg
+                className="w-12 h-12 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="Checkmark icon"
+                role="img"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
             </div>
-          </ScrollAnimation>
+          </div>
 
-          <ScrollAnimation direction="up" delay={0.4}>
-            <h1 className="text-4xl sm:text-6xl font-semibold text-green-600 mb-4">
-              Booking Confirmed!
-            </h1>
-          </ScrollAnimation>
+          <h1 className="text-4xl sm:text-6xl font-semibold text-green-600 mb-4">
+            Booking Confirmed!
+          </h1>
 
-          <ScrollAnimation direction="up" delay={0.6}>
-            <p className="text-xl sm:text-2xl text-muted-foreground mb-8">
-              Thank you,{' '}
-              <span className="font-semibold text-foreground">{name}</span>!
-              {redirectStatus === 'succeeded' && (
-                <span className="block text-lg text-green-600 mt-2">
-                  Your payment has been processed successfully.
+          <p className="text-xl sm:text-2xl text-muted-foreground mb-8">
+            Thank you,{' '}
+            <span className="font-semibold text-foreground">{name}</span>!
+            {redirectStatus === 'succeeded' && (
+              <span className="block text-lg text-green-600 mt-2">
+                Your payment has been processed successfully.
+              </span>
+            )}
+          </p>
+
+          <div className="bg-card border rounded-2xl p-8 sm:p-12 text-left max-w-2xl mx-auto">
+            <h2 className="text-2xl font-semibold mb-6 text-center">
+              Your Class Details
+            </h2>
+
+            <div className="space-y-4">
+              <div className="flex justify-between items-center py-3 border-b border-border">
+                <span className="font-medium text-muted-foreground">Class</span>
+                <span className="font-semibold text-right">{title}</span>
+              </div>
+
+              <div className="flex justify-between items-center py-3 border-b border-border">
+                <span className="font-medium text-muted-foreground">
+                  Date & Time
                 </span>
-              )}
-            </p>
-          </ScrollAnimation>
-
-          <ScrollAnimation direction="up" delay={0.8}>
-            <div className="bg-card border rounded-2xl p-8 sm:p-12 text-left max-w-2xl mx-auto">
-              <h2 className="text-2xl font-semibold mb-6 text-center">
-                Your Class Details
-              </h2>
-
-              <div className="space-y-4">
-                <div className="flex justify-between items-center py-3 border-b border-border">
-                  <span className="font-medium text-muted-foreground">
-                    Class
-                  </span>
-                  <span className="font-semibold text-right">{title}</span>
-                </div>
-
-                <div className="flex justify-between items-center py-3 border-b border-border">
-                  <span className="font-medium text-muted-foreground">
-                    Date & Time
-                  </span>
-                  <span className="font-semibold text-right">
-                    {formatDateTime(date, startTime)}
-                  </span>
-                </div>
-
-                <div className="flex justify-between items-center py-3 border-b border-border">
-                  <span className="font-medium text-muted-foreground">
-                    Duration
-                  </span>
-                  <span className="font-semibold">1 hour</span>
-                </div>
-
-                <div className="flex justify-between items-center py-3 border-b border-border">
-                  <span className="font-medium text-muted-foreground">
-                    Location
-                  </span>
-                  <span className="font-semibold text-right">{location}</span>
-                </div>
-
-                <div className="flex justify-between items-center py-3 border-b border-border">
-                  <span className="font-medium text-muted-foreground">
-                    Instructor
-                  </span>
-                  <span className="font-semibold">{hostName}</span>
-                </div>
-
-                {paymentIntent && (
-                  <div className="flex justify-between items-center py-3 border-b border-border">
-                    <span className="font-medium text-muted-foreground">
-                      Payment Status
-                    </span>
-                    <span className="font-semibold text-green-600 capitalize">
-                      {redirectStatus === 'succeeded'
-                        ? '✓ Paid'
-                        : redirectStatus}
-                    </span>
-                  </div>
-                )}
-
-                <div className="flex justify-between items-center py-3 border-b border-border">
-                  <span className="font-medium text-muted-foreground">
-                    Price
-                  </span>
-                  <span className="font-semibold">€15</span>
-                </div>
-
-                {uid && (
-                  <div className="flex justify-between items-center py-3">
-                    <span className="font-medium text-muted-foreground">
-                      Booking Reference
-                    </span>
-                    <span className="font-mono text-sm text-muted-foreground">
-                      {uid}
-                    </span>
-                  </div>
-                )}
+                <span className="font-semibold text-right">
+                  {formatDateTime(date, startTime)}
+                </span>
               </div>
+
+              <div className="flex justify-between items-center py-3 border-b border-border">
+                <span className="font-medium text-muted-foreground">
+                  Duration
+                </span>
+                <span className="font-semibold">1 hour</span>
+              </div>
+
+              <div className="flex justify-between items-center py-3 border-b border-border">
+                <span className="font-medium text-muted-foreground">
+                  Location
+                </span>
+                <span className="font-semibold text-right">{location}</span>
+              </div>
+
+              <div className="flex justify-between items-center py-3 border-b border-border">
+                <span className="font-medium text-muted-foreground">
+                  Instructor
+                </span>
+                <span className="font-semibold">{hostName}</span>
+              </div>
+
+              {paymentIntent && (
+                <div className="flex justify-between items-center py-3 border-b border-border">
+                  <span className="font-medium text-muted-foreground">
+                    Payment Status
+                  </span>
+                  <span className="font-semibold text-green-600 capitalize">
+                    {redirectStatus === 'succeeded' ? '✓ Paid' : redirectStatus}
+                  </span>
+                </div>
+              )}
+
+              <div className="flex justify-between items-center py-3 border-b border-border">
+                <span className="font-medium text-muted-foreground">Price</span>
+                <span className="font-semibold">€15</span>
+              </div>
+
+              {uid && (
+                <div className="flex justify-between items-center py-3">
+                  <span className="font-medium text-muted-foreground">
+                    Booking Reference
+                  </span>
+                  <span className="font-mono text-sm text-muted-foreground">
+                    {uid}
+                  </span>
+                </div>
+              )}
             </div>
-          </ScrollAnimation>
+          </div>
 
           <ScrollAnimation direction="up" delay={1.0}>
             <div className="bg-[#101115] text-white rounded-2xl p-8 sm:p-12 max-w-2xl mx-auto">

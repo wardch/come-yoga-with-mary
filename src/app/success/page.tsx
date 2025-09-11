@@ -4,8 +4,9 @@ import {useSearchParams} from 'next/navigation';
 import Link from 'next/link';
 import {Button} from '@/components/ui/button';
 import {ScrollAnimation} from '@/components/ui/scroll-animation';
+import {Suspense} from 'react';
 
-export default function SuccessPage() {
+function SuccessContent() {
   const searchParams = useSearchParams();
 
   const name = searchParams.get('name') || 'there';
@@ -231,5 +232,22 @@ export default function SuccessPage() {
         </div>
       </footer>
     </div>
+  );
+}
+
+export default function SuccessPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="font-sans min-h-screen bg-background flex items-center justify-center">
+          <div className="text-center">
+            <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <p className="text-muted-foreground">Loading...</p>
+          </div>
+        </div>
+      }
+    >
+      <SuccessContent />
+    </Suspense>
   );
 }

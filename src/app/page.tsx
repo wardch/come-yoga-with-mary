@@ -36,7 +36,7 @@ export default function Home() {
       </header>
 
       <section className="bg-background">
-        <div className="mx-auto max-w-6xl px-4 py-20 sm:py-28 grid gap-10 md:grid-cols-2 items-center">
+        <div className="mx-auto max-w-6xl px-4 py-6 sm:py-14 grid gap-8 md:grid-cols-2 items-center">
           <div>
             <h1 className="text-4xl sm:text-6xl font-semibold">
               Candle Yoga in Clontarf
@@ -54,7 +54,7 @@ export default function Home() {
                 aria-label="Book a candle yoga class - opens in new tab"
               >
                 <Button size="lg" className="bg-primary text-background">
-                  Book a class
+                  Reserve Your Spot
                 </Button>
               </Link>
             </div>
@@ -228,8 +228,7 @@ export default function Home() {
               <div>
                 <h3 className="text-xl font-semibold mb-3">What to bring</h3>
                 <p className="text-base sm:text-lg">
-                  Your own yoga mat; optional water and a warm layer. We can
-                  provide mats if you don't have one.
+                  Your own yoga mat; optional water and a warm layer.
                 </p>
               </div>
 
@@ -241,18 +240,38 @@ export default function Home() {
                 </p>
               </div>
             </StaggeredAnimation>
-            <ScrollAnimation direction="up" delay={0.6}>
-              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl">
-                <iframe
-                  src="https://www.google.com/maps?q=St.%20Anthony%E2%80%99s%20Hall%2C%20Clontarf%20Rd%2C%20Dublin%203%2C%20D03%20TY23&output=embed"
-                  className="h-full w-full border-0"
-                  title="Map of St. Anthony's Hall, Clontarf"
-                  loading="lazy"
-                  allowFullScreen
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
-            </ScrollAnimation>
+            <div className="grid gap-6 lg:grid-cols-2">
+              <ScrollAnimation direction="up" delay={0.6}>
+                <div>
+                  <h3 className="text-lg font-semibold mb-3">Map Location</h3>
+                  <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl">
+                    <iframe
+                      src="https://www.google.com/maps?q=St.%20Anthony%E2%80%99s%20Hall%2C%20Clontarf%20Rd%2C%20Dublin%203%2C%20D03%20TY23&output=embed"
+                      className="h-full w-full border-0"
+                      title="Map of St. Anthony's Hall, Clontarf"
+                      loading="lazy"
+                      allowFullScreen
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
+                </div>
+              </ScrollAnimation>
+
+              <ScrollAnimation direction="up" delay={0.8}>
+                <div>
+                  <h3 className="text-lg font-semibold mb-3">The Venue</h3>
+                  <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl">
+                    <Image
+                      src="/images/outside-house.webp"
+                      alt="St. Anthony's Hall exterior view from outside"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
+                </div>
+              </ScrollAnimation>
+            </div>
           </div>
         </section>
 

@@ -62,7 +62,7 @@ export default function Home() {
 
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
             <Image
-              src="/images/yoga-field.webp"
+              src="/images/mary-hero.webp"
               alt="Peaceful yoga mat placed on a field with warm candlelit tones, representing the serene outdoor yoga experience"
               fill
               priority

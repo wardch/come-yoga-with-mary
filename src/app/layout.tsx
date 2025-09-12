@@ -83,58 +83,58 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Candle Yoga',
+  description:
+    'All-levels candlelit vinyasa flow yoga classes in Clontarf, Dublin',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+  telephone: '+353-1-123-4567',
+  email: 'charlieward18@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: "St. Anthony's Hall, Clontarf Rd",
+    addressLocality: 'Dublin',
+    addressRegion: 'Dublin',
+    postalCode: 'D03 TY23',
+    addressCountry: 'IE',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: '53.3656',
+    longitude: '-6.2018',
+  },
+  openingHours: 'Mo 19:45-20:45',
+  priceRange: '€',
+  image: '/images/yoga-field.webp',
+  sameAs: [
+    'https://instagram.com/come_yogawithmary',
+    'https://chat.whatsapp.com/CwzzpKBZvPwHMV7gN5vMJl',
+  ],
+  founder: {
+    '@type': 'Person',
+    name: 'Mary Duffy',
+    jobTitle: 'Yoga Instructor',
+    description:
+      'Certified yoga instructor trained in Goa, India and chartered psychologist',
+  },
+  offers: {
+    '@type': 'Offer',
+    name: 'Candle Yoga Class',
+    description: 'Weekly candlelit vinyasa flow yoga class',
+    price: '15',
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/InStock',
+    validFrom: '2025-09-29',
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'Candle Yoga',
-    description:
-      'All-levels candlelit vinyasa flow yoga classes in Clontarf, Dublin',
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-    telephone: '+353-1-123-4567',
-    email: 'charlieward18@gmail.com',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: "St. Anthony's Hall, Clontarf Rd",
-      addressLocality: 'Dublin',
-      addressRegion: 'Dublin',
-      postalCode: 'D03 TY23',
-      addressCountry: 'IE',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: '53.3656',
-      longitude: '-6.2018',
-    },
-    openingHours: 'Mo 19:45-20:45',
-    priceRange: '€',
-    image: '/images/yoga-field.webp',
-    sameAs: [
-      'https://instagram.com/come_yogawithmary',
-      'https://chat.whatsapp.com/CwzzpKBZvPwHMV7gN5vMJl',
-    ],
-    founder: {
-      '@type': 'Person',
-      name: 'Mary Duffy',
-      jobTitle: 'Yoga Instructor',
-      description:
-        'Certified yoga instructor trained in Goa, India and chartered psychologist',
-    },
-    offers: {
-      '@type': 'Offer',
-      name: 'Candle Yoga Class',
-      description: 'Weekly candlelit vinyasa flow yoga class',
-      price: '15',
-      priceCurrency: 'EUR',
-      availability: 'https://schema.org/InStock',
-      validFrom: '2025-09-29',
-    },
-  };
-
   return (
     <html lang="en">
       <Analytics />

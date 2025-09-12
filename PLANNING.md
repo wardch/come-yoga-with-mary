@@ -1,7 +1,7 @@
-## Candle Yoga — Project Plan
+## Candlelit Yoga — Project Plan
 
 ### Context
-Mary teaches Candle Yoga in St. Anthony's Hall (Clontarf). Mondays 7:45–8:45pm. Six-week series starting Monday, 29 September 2025. Candlelit, beautiful repurposed church space. All levels.
+Mary teaches Candlelit Yoga in St. Anthony's Hall (Clontarf). Mondays 7:45–8:45pm. Six-week series starting Monday, 29 September 2025. Candlelit, beautiful repurposed church space. All levels.
 
 ## MVP scope checklist
 - [ ] Single-page site (mobile-first, responsive)
@@ -63,7 +63,7 @@ Mary teaches Candle Yoga in St. Anthony's Hall (Clontarf). Mondays 7:45–8:45pm
 - Imagery: low-light candle glow, architectural details, soft motion
 
 ## SEO baseline
-- Title: Candle Yoga in Clontarf — Mondays at St. Anthony’s Hall
+- Title: Candlelit Yoga in Clontarf — Mondays at St. Anthony’s Hall
 - Meta description: Candlelit, all-levels yoga in a beautifully repurposed church. Mondays 7:45–8:45pm in Clontarf. Six-week series starting late September. Join Mary for a calming practice.
 - Open Graph: same as above + hero image (1200×630)
 - Optional: LocalBusiness or Event structured data when dates are final

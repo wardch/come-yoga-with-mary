@@ -17,7 +17,7 @@ export default function Home() {
       </a>
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur border-b">
         <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
-          <span className="text-lg font-semibold">Candle Yoga</span>
+          <span className="text-lg font-semibold">Candlelit Yoga</span>
           <nav className="flex gap-2" aria-label="Main navigation">
             <Link
               href="https://cal.com/wardch/candle-lit-yoga"
@@ -39,7 +39,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 py-6 sm:py-14 grid gap-8 md:grid-cols-2 items-center">
           <div>
             <h1 className="text-4xl sm:text-6xl font-semibold">
-              Candle Yoga in Clontarf
+              Candlelit Yoga in Clontarf
             </h1>
             <p className="mt-6 text-lg sm:text-xl max-w-prose">
               Immerse yourself in a serene vinyasa flow every Monday from 7:45
@@ -87,7 +87,7 @@ export default function Home() {
 
           <div>
             <h2 className="text-3xl sm:text-5xl font-semibold">
-              Why Candle Yoga?
+              Why Candlelit Yoga?
             </h2>
             <p className="mt-6 text-base sm:text-lg text-white/80 max-w-prose">
               Experience yoga in a tranquil, candlelit setting every Monday
@@ -136,7 +136,7 @@ export default function Home() {
           <ScrollAnimation direction="up" delay={0.2}>
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
               <Image
-                src="/images/Yoga Picture from Unsplash.webp"
+                src="/images/meet-instructor.webp"
                 alt="Mary Duffy, certified yoga instructor, demonstrating a yoga pose with calm and professional guidance"
                 fill
                 className="object-cover"
@@ -350,7 +350,7 @@ export default function Home() {
       <footer className="border-t">
         <div className="mx-auto max-w-6xl px-4 py-10 text-sm text-muted-foreground">
           <p>
-            © {new Date().getFullYear()} Candle Yoga — St. Anthony's Hall,
+            © {new Date().getFullYear()} Candlelit Yoga — St. Anthony's Hall,
             Clontarf
           </p>
         </div>

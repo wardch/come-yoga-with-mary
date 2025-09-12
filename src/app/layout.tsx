@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Candle Yoga in Clontarf — Mondays at St. Anthony's Hall",
+  title: "Candlelit Yoga in Clontarf — Mondays at St. Anthony's Hall",
   description:
     'All-levels candlelit vinyasa flow in a beautifully repurposed church space. Mondays 7:45–8:45pm. Six-week series starting 29 Sep 2025.',
   keywords: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   ],
   authors: [{name: 'Mary Duffy'}],
   creator: 'Mary Duffy',
-  publisher: 'Candle Yoga',
+  publisher: 'Candlelit Yoga',
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
   ),
@@ -44,24 +44,24 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    title: "Candle Yoga in Clontarf — Mondays at St. Anthony's Hall",
+    title: "Candlelit Yoga in Clontarf — Mondays at St. Anthony's Hall",
     description:
       'All-levels candlelit vinyasa flow in a beautifully repurposed church space. Mondays 7:45–8:45pm. Six-week series starting 29 Sep 2025.',
     url: '/',
-    siteName: 'Candle Yoga',
+    siteName: 'Candlelit Yoga',
     images: [
       {
         url: '/images/yoga-field.webp',
         width: 1200,
         height: 630,
-        alt: "Candle Yoga in Clontarf at St. Anthony's Hall",
+        alt: "Candlelit Yoga in Clontarf at St. Anthony's Hall",
       },
     ],
     locale: 'en_IE',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Candle Yoga in Clontarf — Mondays at St. Anthony's Hall",
+    title: "Candlelit Yoga in Clontarf — Mondays at St. Anthony's Hall",
     description:
       'All-levels candlelit vinyasa flow in a beautifully repurposed church space. Mondays 7:45–8:45pm. Six-week series starting 29 Sep 2025.',
     images: ['/images/yoga-field.webp'],
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Candle Yoga',
+  name: 'Candlelit Yoga',
   description:
     'All-levels candlelit vinyasa flow yoga classes in Clontarf, Dublin',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
@@ -121,7 +121,7 @@ const structuredData = {
   },
   offers: {
     '@type': 'Offer',
-    name: 'Candle Yoga Class',
+    name: 'Candlelit Yoga Class',
     description: 'Weekly candlelit vinyasa flow yoga class',
     price: '15',
     priceCurrency: 'EUR',

@@ -64,7 +64,7 @@ function SuccessContent() {
             href="/"
             className="text-lg font-semibold hover:text-primary transition-colors"
           >
-            Candle Yoga
+            Candlelit Yoga
           </Link>
           <nav className="flex gap-2" aria-label="Main navigation">
             <Link href="/">
@@ -279,7 +279,7 @@ function SuccessContent() {
       <footer className="border-t mt-20">
         <div className="mx-auto max-w-6xl px-4 py-10 text-sm text-muted-foreground text-center">
           <p>
-            © {new Date().getFullYear()} Candle Yoga — St. Anthony's Hall,
+            © {new Date().getFullYear()} Candlelit Yoga — St. Anthony's Hall,
             Clontarf
           </p>
         </div>

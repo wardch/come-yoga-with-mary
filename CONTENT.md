@@ -1,7 +1,7 @@
-## Candle Yoga — Approved Copy (MVP)
+## Candlelit Yoga — Approved Copy (MVP)
 
 ### Hero
-**Candle Yoga in Clontarf**  
+**Candlelit Yoga in Clontarf**  
 All-levels, candlelit vinyasa flow in St. Anthony’s Hall. Mondays 7:45–8:45pm.  
 CTA: Join the WhatsApp group or contact us to learn more.
 

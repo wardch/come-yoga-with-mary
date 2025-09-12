@@ -5,7 +5,7 @@
    - Logo/wordmark (text for now)
    - CTA buttons: WhatsApp, Contact
 2. Hero
-   - Title: Candle Yoga in Clontarf
+   - Title: Candlelit Yoga in Clontarf
    - Tagline
    - Primary CTA: Join WhatsApp
    - Secondary CTA: Contact

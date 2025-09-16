@@ -175,7 +175,7 @@ export default function Home() {
           <ScrollAnimation direction="up" delay={0.4}>
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
               <Image
-                src="/images/candle-class.webp"
+                src="/images/the-space.webp"
                 alt="Candlelit yoga session in the high-ceilinged hall"
                 fill
                 className="object-cover"
@@ -259,7 +259,7 @@ export default function Home() {
 
               <ScrollAnimation direction="up" delay={0.8}>
                 <div>
-                  <h3 className="text-lg font-semibold mb-3">The Venue</h3>
+                  <h3 className="text-lg font-semibold mb-3">The Venue's Entrance</h3>
                   <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl">
                     <Image
                       src="/images/outside-house.webp"

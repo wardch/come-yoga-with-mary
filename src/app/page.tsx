@@ -20,15 +20,15 @@ export default function Home() {
           <span className="text-lg font-semibold">Candlelit Yoga</span>
           <nav className="flex gap-2" aria-label="Main navigation">
             <Link
-              href="https://cal.com/wardch/candle-lit-yoga"
+              href="https://instagram.com/come_yogawithmary"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Button
                 className="bg-primary text-background"
-                aria-label="Book a yoga class"
+                aria-label="Follow on Instagram"
               >
-                Book a class
+                Follow on Instagram
               </Button>
             </Link>
           </nav>
@@ -46,15 +46,21 @@ export default function Home() {
               PM to 8:45 PM. Perfect for all levels, this class will rejuvenate
               your body and mind under the soft glow of candlelight.
             </p>
-            <div className="mt-8 flex gap-3">
+            <div className="mt-8 p-4 rounded-lg bg-amber-50 border border-amber-200">
+              <p className="text-amber-800 font-medium mb-2">
+                Classes temporarily paused
+              </p>
+              <p className="text-amber-700 text-sm mb-3">
+                We're taking a short break. Follow Mary on Instagram for updates on when classes will resume.
+              </p>
               <Link
-                href="https://cal.com/wardch/candle-lit-yoga"
+                href="https://instagram.com/come_yogawithmary"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Book a candle yoga class - opens in new tab"
+                aria-label="Follow Mary on Instagram for updates"
               >
                 <Button size="lg" className="bg-primary text-background">
-                  Reserve Your Spot
+                  Follow on Instagram
                 </Button>
               </Link>
             </div>
@@ -98,16 +104,16 @@ export default function Home() {
             </p>
             <div className="mt-8 flex gap-3">
               <Link
-                href="https://cal.com/wardch/candle-lit-yoga"
+                href="https://instagram.com/come_yogawithmary"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Book a candle yoga class - opens in new tab"
+                aria-label="Follow Mary on Instagram for class updates"
               >
                 <Button
                   variant="secondary"
                   className="bg-white text-[#101115] hover:bg-white/90"
                 >
-                  Book a class
+                  Follow on Instagram
                 </Button>
               </Link>
               <Link
@@ -275,26 +281,28 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="rounded-2xl bg-gray-100 text-gray-900 p-8 sm:p-12 text-center">
+        <section className="rounded-2xl bg-amber-50 border border-amber-200 text-gray-900 p-8 sm:p-12 text-center">
           <ScrollAnimation direction="up" delay={0.2}>
-            <h2 className="text-3xl sm:text-4xl font-semibold mb-4">
-              Reserve your Place
+            <h2 className="text-3xl sm:text-4xl font-semibold mb-4 text-amber-900">
+              Classes Temporarily Paused
             </h2>
           </ScrollAnimation>
           <ScrollAnimation direction="up" delay={0.4}>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-              Join us every Monday from 7:45 PM to 8:45 PM. Spaces are limited,
-              so secure your spot today and immerse yourself in this unique
-              experience!
+            <p className="text-base sm:text-lg text-amber-800 max-w-2xl mx-auto mb-8">
+              We're taking a short break from our Monday evening classes. For updates on when we'll be back, or if you have any questions about yoga and future sessions, reach out to Mary on Instagram.
             </p>
           </ScrollAnimation>
           <ScrollAnimation direction="up" delay={0.6}>
-            <Link href="https://cal.com/wardch/candle-lit-yoga" target="_blank">
+            <Link
+              href="https://instagram.com/come_yogawithmary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 size="lg"
                 className="bg-primary text-background hover:bg-primary/90"
               >
-                Reserve
+                Follow Mary on Instagram
               </Button>
             </Link>
           </ScrollAnimation>

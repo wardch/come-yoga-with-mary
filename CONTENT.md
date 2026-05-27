@@ -1,63 +1,53 @@
-## Candlelit Yoga — Approved Copy (MVP)
+# Mary Duffy - Approved Copy Direction
 
-### Hero
-**Candlelit Yoga in Clontarf**  
-All-levels, candlelit vinyasa flow in St. Anthony’s Hall. Mondays 7:45–8:45pm.  
-CTA: Join the WhatsApp group or contact us to learn more.
+## Positioning
 
-### Announcement
-Six-week series starting Monday, 29 September 2025.
+Mary Duffy is a person-led creator and educator brand at the intersection of organisational psychology, burnout recovery, and embodied wellbeing.
 
-### Schedule & Dates
-- Weekly: Mondays, 7:45–8:45pm  
-- Series dates (6 weeks):  
-  - Mon, 29 Sep 2025  
-  - Mon, 06 Oct 2025  
-  - Mon, 13 Oct 2025  
-  - Mon, 20 Oct 2025  
-  - Mon, 27 Oct 2025  
-  - Mon, 03 Nov 2025
+The site should not primarily sell local candlelit yoga classes. Yoga supports the embodied recovery layer, but the public brand is Mary.
 
-### Location
-Join us at [St. Anthony's Hall](https://maps.app.goo.gl/qETiqWa7L5dr5RWTA), Clontarf Rd, Clontarf, Dublin 3, D03 TY23. Please enter through the back door for easy access. Free parking is available in the church car park via St. Lawrence's Road. Not to be confused with St Anthony’s House (a smaller space within the same church grounds, not on the seafront).
+## Hero
 
-### About the Class
-Experience yoga in a tranquil, candlelit setting every Monday evening. Our vinyasa flow class is designed for all levels, from beginners to seasoned practitioners. The gentle atmosphere and soft lighting create an ideal space for relaxation, allowing you to connect with your breath and body.
+**For people who are good at coping, but not recovering.**
 
-### What to Bring
-Please bring your own yoga mat. Optional: water, warm layer.
+Mary Duffy shares evidence-based tools from organisational psychology and yoga to help high-functioning professionals understand burnout, rebuild recovery, and work in a way their body can sustain.
 
-### Who It’s For
-All levels welcome. Modifications offered throughout.
+Primary CTA: Get the 5-day reset.
 
-### Pricing
-- Drop-in: €15  
-- Pack of 3: €37.50 (€12.50 each)  
-Payment: Cash, Revolut, or online payment processed in person.
+## Lead Magnet
 
-### Capacity
-Up to ~80 participants.
+**The Burnout Recovery Reset**
 
-### Meet Your Instructor: Mary Duffy
-Mary Duffy is a certified yoga instructor trained in Goa, India, and a chartered psychologist. Mary blends her love for yoga with her background in psychology to create classes that are uplifting and supportive. No matter your level, you’ll feel at home in her classes, which emphasize mindfulness and community.
+Five short emails to help people:
 
-### Join Our Community
-You’ll find a warm, welcoming space to unwind after a long day or deepen your practice among a supportive community.
+- Spot the signs of burnout before collapse
+- Understand their stress and recovery cycle
+- Try a five-minute nervous system reset
+- Redesign one work boundary
+- Build a recovery rhythm that survives real life
 
-### Contact & Community
-- WhatsApp group: https://chat.whatsapp.com/CwzzpKBZvPwHMV7gN5vMJl?mode=ems_copy_c  
-- Instagram: https://instagram.com/come_yogawithmary  
-- Email: Use the form below or email directly at charlieward18@gmail.com
+## Proof
 
-### FAQs
-- Arrival: Please arrive a few minutes early to settle in.  
-- Parking: Free on-site via St. Lawrence’s Road.  
-- Accessibility: Candlelit, low-light environment; modifications available.  
-- Policies: Drop-in welcome. Cancellations via WhatsApp/Email.
+- Mary is a qualified organisational psychologist.
+- Mary is a certified yoga teacher.
+- WHO recognises burnout as an occupational phenomenon linked to chronic workplace stress.
+- Gallup reports significant global workplace stress and low engagement.
 
-### Media
-Use 3–5 photos from `public/images/` for hero and gallery. Alt text to be added per image.
+Do not invent testimonials, client logos, audience numbers, or outcome claims.
 
-### Citations
-- WhatsApp group invite referenced: `https://chat.whatsapp.com/CwzzpKBZvPwHMV7gN5vMJl?mode=ems_copy_c`
+## Content Pillars
 
+- Burnout literacy
+- Recovery as a skill
+- Healthier work
+- Embodied leadership
+
+## Social Links
+
+- Instagram: https://instagram.com/come_yogawithmary
+- TikTok: https://www.tiktok.com/@come_yogawithmary
+- LinkedIn: https://www.linkedin.com/in/mary-duffy-295832127/
+
+## Safety Boundary
+
+Mary's content is educational and practical. It is not clinical therapy, diagnosis, treatment, or medical advice.

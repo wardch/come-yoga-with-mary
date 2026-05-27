@@ -1,71 +1,70 @@
-import type {Metadata} from 'next';
-import {Geist, Geist_Mono} from 'next/font/google';
-import './globals.css';
-import {Analytics} from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next";
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
 
 const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-  display: 'swap',
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+  display: "swap",
   preload: true,
 });
 
 const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-  display: 'swap',
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+  display: "swap",
   preload: true,
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.comeyogawithmary.com";
+
 export const metadata: Metadata = {
-  title: "Candlelit Yoga in Clontarf — Mondays at St. Anthony's Hall",
+  title: "Mary Duffy | Burnout Recovery for High-Functioning People",
   description:
-    'All-levels candlelit vinyasa flow in a beautifully repurposed church space. Mondays 7:45–8:45pm. Six-week series starting 29 Sep 2025.',
+    "Evidence-based burnout recovery guidance from Mary Duffy, a qualified organisational psychologist and certified yoga teacher.",
   keywords: [
-    'yoga clontarf',
-    'candle yoga dublin',
-    'vinyasa flow dublin',
-    'yoga classes clontarf',
-    'evening yoga dublin',
-    'candlelit yoga',
-    'st anthonys hall yoga',
-    'mary duffy yoga',
-    'yoga instructor dublin',
-    'mindfulness yoga dublin',
+    "Mary Duffy",
+    "burnout recovery",
+    "organisational psychology",
+    "workplace wellbeing",
+    "stress recovery",
+    "high-functioning burnout",
+    "mind body recovery",
+    "embodied leadership",
   ],
-  authors: [{name: 'Mary Duffy'}],
-  creator: 'Mary Duffy',
-  publisher: 'Candlelit Yoga',
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
-  ),
+  authors: [{ name: "Mary Duffy" }],
+  creator: "Mary Duffy",
+  publisher: "Mary Duffy",
+  metadataBase: new URL(siteUrl),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   openGraph: {
-    type: 'website',
-    title: "Candlelit Yoga in Clontarf — Mondays at St. Anthony's Hall",
+    type: "website",
+    title: "Mary Duffy | For people who are good at coping, but not recovering",
     description:
-      'All-levels candlelit vinyasa flow in a beautifully repurposed church space. Mondays 7:45–8:45pm. Six-week series starting 29 Sep 2025.',
-    url: '/',
-    siteName: 'Candlelit Yoga',
+      "Organisational psychology and embodied recovery tools for high-functioning professionals navigating burnout, stress, and healthier work.",
+    url: "/",
+    siteName: "Mary Duffy",
     images: [
       {
-        url: '/images/yoga-field.webp',
+        url: "/images/get-to-know.webp",
         width: 1200,
-        height: 630,
-        alt: "Candlelit Yoga in Clontarf at St. Anthony's Hall",
+        height: 900,
+        alt: "Mary Duffy practising yoga outdoors at sunrise",
       },
     ],
-    locale: 'en_IE',
+    locale: "en_IE",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: "Candlelit Yoga in Clontarf — Mondays at St. Anthony's Hall",
+    card: "summary_large_image",
+    title: "Mary Duffy | Burnout Recovery for High-Functioning People",
     description:
-      'All-levels candlelit vinyasa flow in a beautifully repurposed church space. Mondays 7:45–8:45pm. Six-week series starting 29 Sep 2025.',
-    images: ['/images/yoga-field.webp'],
-    creator: '@come_yogawithmary',
+      "Evidence-based burnout recovery guidance from organisational psychology and yoga.",
+    images: ["/images/get-to-know.webp"],
+    creator: "@come_yogawithmary",
   },
   robots: {
     index: true,
@@ -73,9 +72,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   verification: {
@@ -84,50 +83,26 @@ export const metadata: Metadata = {
 };
 
 const structuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Candlelit Yoga',
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Mary Duffy",
+  url: siteUrl,
+  jobTitle: "Organisational Psychologist and Yoga Teacher",
   description:
-    'All-levels candlelit vinyasa flow yoga classes in Clontarf, Dublin',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-  telephone: '+353-1-123-4567',
-  email: 'charlieward18@gmail.com',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: "St. Anthony's Hall, Clontarf Rd",
-    addressLocality: 'Dublin',
-    addressRegion: 'Dublin',
-    postalCode: 'D03 TY23',
-    addressCountry: 'IE',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: '53.3656',
-    longitude: '-6.2018',
-  },
-  openingHours: 'Mo 19:45-20:45',
-  priceRange: '€',
-  image: '/images/yoga-field.webp',
+    "Mary Duffy shares evidence-based burnout recovery guidance for high-functioning professionals.",
+  image: `${siteUrl}/images/get-to-know.webp`,
   sameAs: [
-    'https://instagram.com/come_yogawithmary',
-    'https://chat.whatsapp.com/CwzzpKBZvPwHMV7gN5vMJl',
+    "https://instagram.com/come_yogawithmary",
+    "https://www.tiktok.com/@come_yogawithmary",
+    "https://www.linkedin.com/in/mary-duffy-295832127/",
   ],
-  founder: {
-    '@type': 'Person',
-    name: 'Mary Duffy',
-    jobTitle: 'Yoga Instructor',
-    description:
-      'Certified yoga instructor trained in Goa, India and chartered psychologist',
-  },
-  offers: {
-    '@type': 'Offer',
-    name: 'Candlelit Yoga Class',
-    description: 'Weekly candlelit vinyasa flow yoga class',
-    price: '15',
-    priceCurrency: 'EUR',
-    availability: 'https://schema.org/InStock',
-    validFrom: '2025-09-29',
-  },
+  knowsAbout: [
+    "Burnout recovery",
+    "Organisational psychology",
+    "Workplace wellbeing",
+    "Yoga",
+    "Embodied leadership",
+  ],
 };
 
 export default function RootLayout({
@@ -138,10 +113,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{__html: JSON.stringify(structuredData)}}
-        />
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

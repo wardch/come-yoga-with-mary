@@ -1,21 +1,21 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from "next";
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
 });
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  output: "export",
   trailingSlash: true,
   images: {
     unoptimized: true,
   },
   experimental: {
-    optimizePackageImports: ['@radix-ui/react-label', '@radix-ui/react-slot'],
+    optimizePackageImports: ["@radix-ui/react-label", "@radix-ui/react-slot"],
   },
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: process.env.NODE_ENV === "production",
   },
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);

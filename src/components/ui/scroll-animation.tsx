@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import {motion, type Variants} from 'framer-motion';
-import type {ReactNode} from 'react';
+import { motion, type Variants } from "framer-motion";
+import type { ReactNode } from "react";
 
 interface ScrollAnimationProps {
   children: ReactNode;
   className?: string;
   delay?: number;
-  direction?: 'up' | 'down' | 'left' | 'right';
+  direction?: "up" | "down" | "left" | "right";
 }
 
 const fadeInUp: Variants = {
@@ -87,9 +87,9 @@ const variants = {
 
 export function ScrollAnimation({
   children,
-  className = '',
+  className = "",
   delay = 0,
-  direction = 'up',
+  direction = "up",
 }: ScrollAnimationProps) {
   const selectedVariants = variants[direction];
 
@@ -102,7 +102,7 @@ export function ScrollAnimation({
       viewport={{
         once: true,
         amount: 0.3,
-        margin: '-50px',
+        margin: "-50px",
       }}
       transition={{
         delay,
@@ -117,7 +117,7 @@ export function ScrollAnimation({
 
 export function StaggeredAnimation({
   children,
-  className = '',
+  className = "",
   staggerDelay = 0.1,
 }: {
   children: ReactNode;
@@ -125,7 +125,7 @@ export function StaggeredAnimation({
   staggerDelay?: number;
 }) {
   const containerVariants: Variants = {
-    hidden: {opacity: 0},
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
@@ -164,7 +164,7 @@ export function StaggeredAnimation({
       viewport={{
         once: true,
         amount: 0.2,
-        margin: '-30px',
+        margin: "-30px",
       }}
     >
       {childrenArray.map((child, index) => {

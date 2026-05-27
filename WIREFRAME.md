@@ -1,60 +1,55 @@
-## Wireframe and Component Map (MVP)
+# Wireframe and Component Map
 
-### Mobile-first layout (single page)
+## Single Homepage
+
 1. Header
-   - Logo/wordmark (text for now)
-   - CTA buttons: WhatsApp, Contact
+   - Mary Duffy wordmark
+   - Anchor links: Reset, Work, Follow
+   - CTA: Join the email list
+
 2. Hero
-   - Title: Candlelit Yoga in Clontarf
-   - Tagline
-   - Primary CTA: Join WhatsApp
-   - Secondary CTA: Contact
-   - Background: hero image (soft overlay)
-3. About the class
-   - Short paragraph
-   - Bullets: all levels, candlelit, vinyasa flow
-4. Schedule & dates
-   - Mondays 7:45–8:45pm
-   - 6 dates list
-5. Location
-   - Address block, hall vs house clarification
-   - Map link button
-   - Parking info
-6. What to bring
-   - Short list
-7. Instructor
-   - Photo + bio
-8. Pricing
-   - Drop-in, 3-pack, payment methods
-9. Gallery
-   - 3–5 images grid (lazy)
-10. Contact form
-   - Name, email, message
-   - Success/error states
-11. Footer
-   - Social links, email, small print
+   - Eyebrow: Organisational psychology + embodied recovery
+   - Headline: For people who are good at coping, but not recovering.
+   - Supporting copy
+   - Email-only signup block
+   - Mary-led image
 
-### Desktop layout adjustments
-- Two-column for About/Location/Instructor where suitable
-- Wider gallery grid
-- Sticky top nav with CTA
+3. Credibility Strip
+   - Gallup stress stat
+   - Gallup manager stress stat
+   - WHO burnout framing
 
-### shadcn/ui component mapping
-- Button: primary/secondary/outline (CTA, map, contact)
-- Card: About, Location, Pricing, Instructor
-- Alert: house vs hall clarification
-- Input, Textarea, Label, Form: contact form
-- Separator: section dividers
-- Sheet or Dialog (optional): quick RSVP info
-- Typography utilities: headings/body
+4. Burnout Recovery Reset
+   - Five-day sequence outline
 
-### Patterns
-- Responsive container and spacing tokens
-- Light theme with warm accent; dark-friendly
-- Motion reduced for accessibility
+5. What Mary Teaches
+   - Burnout literacy
+   - Recovery as a skill
+   - Healthier work
+   - Embodied leadership
 
-### Open design confirmations
-- Accent color preference (amber/ivory on charcoal?)
-- Serif for headings ok? (e.g., Playfair/Libre Baskerville later)
-- Hero image selection from `public/images`
+6. About Mary
+   - Credentials and psychology/yoga bridge
+   - Supporting Mary image
 
+7. Coming Next
+   - Workshops
+   - Mini series
+   - Workplace sessions
+   - Playlists/resources
+
+8. Social Follow
+   - Instagram
+   - TikTok
+   - LinkedIn
+
+9. Final CTA
+   - Burnout Recovery Reset signup repeated
+
+10. Footer
+   - Mary Duffy
+   - Educational-content safety note
+
+## Design Direction
+
+Calm editorial/professional. Use warm neutrals, deep ink, muted green, and restrained accents. Avoid spa branding, generic wellness templates, and candlelit-class imagery as the dominant signal.

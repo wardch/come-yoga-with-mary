@@ -1,90 +1,278 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import {Button} from '@/components/ui/button';
-import {
-  ScrollAnimation,
-  StaggeredAnimation,
-} from '@/components/ui/scroll-animation';
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
+const socialLinks = [
+  {
+    label: "Instagram",
+    href: "https://instagram.com/come_yogawithmary",
+  },
+  {
+    label: "TikTok",
+    href: "https://www.tiktok.com/@come_yogawithmary",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/mary-duffy-295832127/",
+  },
+];
+
+const stats = [
+  {
+    value: "40%",
+    label:
+      "of employees globally experienced a lot of stress the previous day.",
+    source: "Gallup 2026",
+    href: "https://www.gallup.com/workplace/697904/state-of-the-global-workplace-global-data.aspx",
+  },
+  {
+    value: "45%",
+    label: "of managers reported significant daily stress.",
+    source: "Gallup 2026",
+    href: "https://www.gallup.com/workplace/697904/state-of-the-global-workplace-global-data.aspx",
+  },
+  {
+    value: "WHO",
+    label:
+      "recognises burnout as an occupational phenomenon linked to chronic workplace stress.",
+    source: "WHO ICD-11",
+    href: "https://www.who.int/standards/classifications/frequently-asked-questions/burn-out-an-occupational-phenomenon",
+  },
+];
+
+const pillars = [
+  {
+    title: "Burnout literacy",
+    text: "What burnout is, what it is not, and why capable people often miss the signs until recovery is already overdue.",
+  },
+  {
+    title: "Recovery as a skill",
+    text: "Practical ways to rebuild capacity through rest, attention, boundaries, nervous system regulation, and sustainable rhythms.",
+  },
+  {
+    title: "Healthier work",
+    text: "Evidence-based organisational psychology for workload, role clarity, autonomy, team norms, and better-designed jobs.",
+  },
+  {
+    title: "Embodied leadership",
+    text: "The yoga and mind-body bridge: noticing stress earlier, grounding before decisions, and leading from a regulated state.",
+  },
+];
+
+const resetDays = [
+  "Spot the signs of burnout before collapse",
+  "Understand your stress and recovery cycle",
+  "Try a five-minute nervous system reset",
+  "Redesign one work boundary",
+  "Build a recovery rhythm that survives real life",
+];
+
+const offers = [
+  "Low-cost workshops on burnout recovery",
+  "Mini series for high-functioning professionals",
+  "Workplace sessions for teams and managers",
+  "Guided playlists and practical recovery resources",
+];
+
+function SignupBlock() {
+  return (
+    <form
+      action="/success"
+      method="get"
+      className="grid gap-3 rounded-lg border border-[#d8ded2] bg-white p-4 shadow-sm sm:grid-cols-[1fr_auto]"
+    >
+      <label htmlFor="email" className="sr-only">
+        Email address
+      </label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        required
+        placeholder="Email address"
+        className="h-11 min-w-0 rounded-md border border-[#cfd8c8] bg-[#fbfaf6] px-3 text-base text-[#1f2a25] outline-none transition focus:border-[#436b55] focus:ring-3 focus:ring-[#436b55]/20"
+      />
+      <Button
+        type="submit"
+        size="lg"
+        className="h-11 bg-[#243b31] text-white hover:bg-[#1b2e26]"
+      >
+        Get the 5-day reset
+      </Button>
+      <p className="text-sm leading-6 text-[#5f6d63] sm:col-span-2">
+        Five short emails to help you understand burnout, rebuild recovery, and
+        stop relying on push-through mode. Kit integration is ready to connect.
+      </p>
+    </form>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="font-sans">
+    <div className="font-sans bg-[#f7f4ee] text-[#1f2a25]">
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-primary-foreground px-4 py-2 rounded-md z-50"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-[#243b31] focus:px-4 focus:py-2 focus:text-white"
       >
         Skip to main content
       </a>
-      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur border-b">
-        <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
-          <span className="text-lg font-semibold">Candlelit Yoga</span>
-          <nav className="flex gap-2" aria-label="Main navigation">
-            <Link
-              href="https://instagram.com/come_yogawithmary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                className="bg-primary text-background"
-                aria-label="Follow on Instagram"
-              >
-                Follow on Instagram
-              </Button>
-            </Link>
+
+      <header className="sticky top-0 z-50 border-b border-[#ddd6c9] bg-[#f7f4ee]/90 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
+          <Link href="/" className="text-base font-semibold">
+            Mary Duffy
+          </Link>
+          <nav
+            className="hidden items-center gap-5 text-sm text-[#5f6d63] sm:flex"
+            aria-label="Main navigation"
+          >
+            <a href="#reset" className="hover:text-[#1f2a25]">
+              Reset
+            </a>
+            <a href="#work" className="hover:text-[#1f2a25]">
+              Work
+            </a>
+            <a href="#social" className="hover:text-[#1f2a25]">
+              Follow
+            </a>
           </nav>
+          <a href="#reset">
+            <Button
+              size="sm"
+              className="bg-[#243b31] text-white hover:bg-[#1b2e26]"
+            >
+              Join the email list
+            </Button>
+          </a>
         </div>
       </header>
 
-      <section className="bg-background">
-        <div className="mx-auto max-w-6xl px-4 py-6 sm:py-14 grid gap-8 md:grid-cols-2 items-center">
+      <main id="main-content">
+        <section className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:py-18 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
-            <h1 className="text-4xl sm:text-6xl font-semibold">
-              Candlelit Yoga in Clontarf
+            <p className="mb-5 text-sm font-semibold uppercase text-[#587260]">
+              Organisational psychology + embodied recovery
+            </p>
+            <h1 className="max-w-3xl text-4xl font-semibold leading-[1.02] text-[#17211c] sm:text-6xl">
+              For people who are good at coping, but not recovering.
             </h1>
-            <p className="mt-6 text-lg sm:text-xl max-w-prose">
-              Immerse yourself in a serene vinyasa flow every Monday from 7:45
-              PM to 8:45 PM. Perfect for all levels, this class will rejuvenate
-              your body and mind under the soft glow of candlelight.
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#4f5d54] sm:text-xl">
+              Mary Duffy shares evidence-based tools from organisational
+              psychology and yoga to help high-functioning professionals
+              understand burnout, rebuild recovery, and work in a way their body
+              can sustain.
             </p>
-            <div className="mt-8 p-4 rounded-lg bg-amber-50 border border-amber-200">
-              <p className="text-amber-800 font-medium mb-2">
-                Classes temporarily paused
-              </p>
-              <p className="text-amber-700 text-sm mb-3">
-                We're taking a short break. Follow Mary on Instagram for updates on when classes will resume.
-              </p>
-              <Link
-                href="https://instagram.com/come_yogawithmary"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Follow Mary on Instagram for updates"
-              >
-                <Button size="lg" className="bg-primary text-background">
-                  Follow on Instagram
-                </Button>
-              </Link>
+
+            <div className="mt-8 max-w-2xl" id="reset">
+              <SignupBlock />
             </div>
           </div>
 
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
-            <Image
-              src="/images/mary-hero.webp"
-              alt="Peaceful yoga mat placed on a field with warm candlelit tones, representing the serene outdoor yoga experience"
-              fill
-              priority
-              className="object-cover"
-              sizes="(min-width: 1024px) 50vw, 100vw"
-            />
+          <div className="relative">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-lg border border-[#ddd6c9] bg-[#ece7dc] shadow-sm">
+              <Image
+                src="/images/get-to-know.webp"
+                alt="Mary Duffy practising yoga outdoors at sunrise"
+                fill
+                priority
+                className="object-cover"
+                sizes="(min-width: 1024px) 44vw, 100vw"
+              />
+            </div>
+            <div className="absolute bottom-4 left-4 right-4 rounded-md bg-[#f7f4ee]/92 p-4 text-sm leading-6 text-[#34443a] shadow-sm backdrop-blur">
+              Qualified organisational psychologist. Certified yoga teacher.
+              Creating practical recovery tools for modern work.
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="bg-[#101115] text-white">
-        <div className="mx-auto max-w-6xl px-4 py-20 sm:py-28 grid gap-12 md:grid-cols-2 items-center">
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
+        <section className="border-y border-[#ddd6c9] bg-[#fffdfa]">
+          <div className="mx-auto grid max-w-6xl gap-4 px-4 py-6 md:grid-cols-3">
+            {stats.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg border border-[#e2ddd3] bg-white p-5 transition hover:border-[#9fb19e]"
+              >
+                <p className="text-3xl font-semibold text-[#243b31]">
+                  {item.value}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-[#536158]">
+                  {item.label}
+                </p>
+                <p className="mt-3 text-xs font-semibold uppercase text-[#7b6d55]">
+                  {item.source}
+                </p>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-4 py-18 sm:py-24">
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <p className="text-sm font-semibold uppercase text-[#587260]">
+                Start here
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold text-[#17211c] sm:text-5xl">
+                Recovery is not a reward for finishing everything.
+              </h2>
+              <p className="mt-5 text-base leading-7 text-[#536158]">
+                The Burnout Recovery Reset is a short email series for people
+                who can keep going, but know that push-through mode is costing
+                them.
+              </p>
+            </div>
+
+            <div className="grid gap-3">
+              {resetDays.map((day, index) => (
+                <div
+                  key={day}
+                  className="grid grid-cols-[3rem_1fr] items-center rounded-lg border border-[#ddd6c9] bg-[#fffdfa] p-4"
+                >
+                  <span className="text-sm font-semibold text-[#7b6d55]">
+                    Day {index + 1}
+                  </span>
+                  <p className="text-base text-[#26362d]">{day}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="work" className="bg-[#17211c] text-white">
+          <div className="mx-auto max-w-6xl px-4 py-18 sm:py-24">
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold uppercase text-[#b9c8b5]">
+                What Mary teaches
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold sm:text-5xl">
+                Practical psychology for people and workplaces that need
+                recovery built in.
+              </h2>
+            </div>
+
+            <div className="mt-10 grid gap-4 md:grid-cols-2">
+              {pillars.map((pillar) => (
+                <div
+                  key={pillar.title}
+                  className="rounded-lg border border-white/12 bg-white/[0.04] p-6"
+                >
+                  <h3 className="text-xl font-semibold">{pillar.title}</h3>
+                  <p className="mt-4 leading-7 text-white/72">{pillar.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto grid max-w-6xl gap-10 px-4 py-18 sm:py-24 lg:grid-cols-2 lg:items-center">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-[#ddd6c9] bg-[#ece7dc]">
             <Image
-              src="/images/candle-class.webp"
-              alt="Evening yoga class in St. Anthony's Hall with soft candlelight creating a peaceful, meditative atmosphere"
+              src="/images/meet-instructor.webp"
+              alt="Mary Duffy seated calmly in a bright practice space"
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -92,274 +280,108 @@ export default function Home() {
           </div>
 
           <div>
-            <h2 className="text-3xl sm:text-5xl font-semibold">
-              Why Candlelit Yoga?
-            </h2>
-            <p className="mt-6 text-base sm:text-lg text-white/80 max-w-prose">
-              Experience yoga in a tranquil, candlelit setting every Monday
-              evening. Our vinyasa flow class is designed for all levels, from
-              beginners to seasoned practitioners. The gentle atmosphere and
-              soft lighting create an ideal space for relaxation, allowing you
-              to connect with your breath and body.
+            <p className="text-sm font-semibold uppercase text-[#587260]">
+              About Mary
             </p>
-            <div className="mt-8 flex gap-3">
-              <Link
-                href="https://instagram.com/come_yogawithmary"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Follow Mary on Instagram for class updates"
-              >
-                <Button
-                  variant="secondary"
-                  className="bg-white text-[#101115] hover:bg-white/90"
-                >
-                  Follow on Instagram
-                </Button>
-              </Link>
-              <Link
-                href="https://maps.app.goo.gl/qETiqWa7L5dr5RWTA"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open St. Anthony's Hall location in Google Maps - opens in new tab"
-              >
-                <Button className="bg-primary text-background">
-                  Open in Maps
-                </Button>
-              </Link>
+            <h2 className="mt-3 text-3xl font-semibold text-[#17211c] sm:text-5xl">
+              Evidence-based, practical, and grounded in the body.
+            </h2>
+            <div className="mt-6 space-y-4 text-base leading-8 text-[#536158]">
+              <p>
+                Mary Duffy is a qualified organisational psychologist and
+                certified yoga teacher. Her work connects the science of
+                healthier workplaces with the lived reality of stress, recovery,
+                and the body.
+              </p>
+              <p>
+                This is not about becoming less capable. It is about learning
+                the recovery skills that capability often hides, postpones, or
+                overrides.
+              </p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <main
-        id="main-content"
-        className="mx-auto max-w-6xl px-4 py-20 sm:py-28 space-y-20 sm:space-y-28"
-      >
-        <section
-          id="instructor"
-          className="grid gap-10 md:grid-cols-2 items-center"
-        >
-          <ScrollAnimation direction="up" delay={0.2}>
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
-              <Image
-                src="/images/meet-instructor.webp"
-                alt="Mary Duffy, certified yoga instructor, demonstrating a yoga pose with calm and professional guidance"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-              />
-            </div>
-          </ScrollAnimation>
-          <ScrollAnimation direction="up" delay={0.4}>
+        <section className="border-y border-[#ddd6c9] bg-[#fffdfa]">
+          <div className="mx-auto grid max-w-6xl gap-10 px-4 py-18 sm:py-24 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
-              <h2 className="text-3xl sm:text-5xl font-semibold">
-                Meet your instructor
+              <p className="text-sm font-semibold uppercase text-[#587260]">
+                Coming next
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold text-[#17211c] sm:text-5xl">
+                Free first. Paid offers when the work is useful enough to earn
+                them.
               </h2>
-              <p className="mt-6 text-base sm:text-lg max-w-prose">
-                Mary Duffy is a certified yoga instructor trained in Goa, India.
-                She is also a chartered psychologist. Mary blends her love for
-                yoga with her background in psychology to create classes that
-                are both uplifting and supportive. No matter your level, you'll
-                feel right at home in her classes, which are all about embracing
-                mindfulness and community
+              <p className="mt-5 leading-7 text-[#536158]">
+                The email list is the foundation. From there, Mary will test and
+                shape practical offers around what the audience actually needs.
               </p>
             </div>
-          </ScrollAnimation>
-        </section>
 
-        <section className="rounded-2xl bg-[#101115] text-white p-8 sm:p-12 grid gap-10 md:grid-cols-2 items-center">
-          <ScrollAnimation direction="up" delay={0.2}>
-            <div>
-              <h2 className="text-3xl sm:text-5xl font-semibold">The space</h2>
-              <p className="mt-6 text-base sm:text-lg text-white/80 max-w-prose">
-                Candlelit yoga in a high-ceilinged, beautifully repurposed
-                church hall by the sea. Soft light, generous space and calm
-                atmosphere help you settle your breath and unwind.
-              </p>
-            </div>
-          </ScrollAnimation>
-          <ScrollAnimation direction="up" delay={0.4}>
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
-              <Image
-                src="/images/the-space.webp"
-                alt="Candlelit yoga session in the high-ceilinged hall"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-              />
-            </div>
-          </ScrollAnimation>
-        </section>
-
-        <section id="where-when" className="grid gap-8">
-          <ScrollAnimation direction="up" delay={0.2}>
-            <h2 className="text-3xl sm:text-4xl font-semibold">Where & when</h2>
-          </ScrollAnimation>
-          <div className="grid gap-8">
-            <StaggeredAnimation className="space-y-8" staggerDelay={0.15}>
-              <div>
-                <h3 className="text-xl font-semibold mb-3">Location</h3>
-                <p className="text-base sm:text-lg">
-                  <Link
-                    href="https://maps.app.goo.gl/qETiqWa7L5dr5RWTA"
-                    target="_blank"
-                    className="underline"
-                  >
-                    St. Anthony's Hall, Clontarf Rd, Dublin 3, D03 TY23
-                  </Link>
-                  <span className="text-muted-foreground">
-                    {'  '}
-                    (Not be confused with St. Anthony's House which is nearby)
-                  </span>{' '}
-                  The venue is viewable from the seafront along the Clontarf
-                  Road. The back door is the easiest way to access the hall.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-3">Time</h3>
-                <p className="text-base sm:text-lg">
-                  Mondays 7:45pm–8:45pm (six-week series from 29 Sep 2025).
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-3">Parking</h3>
-                <p className="text-base sm:text-lg">
-                  There is plenty of free parking within the church grounds
-                  right next to the hall.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-3">What to bring</h3>
-                <p className="text-base sm:text-lg">
-                  Your own yoga mat; optional water and a warm layer.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-3">Payment</h3>
-                <p className="text-base sm:text-lg">
-                  €15 per class. Book online through the links above, or we can
-                  handle payment in person if you prefer.
-                </p>
-              </div>
-            </StaggeredAnimation>
-            <div className="grid gap-6 lg:grid-cols-2">
-              <ScrollAnimation direction="up" delay={0.6}>
-                <div>
-                  <h3 className="text-lg font-semibold mb-3">Map Location</h3>
-                  <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl">
-                    <iframe
-                      src="https://www.google.com/maps?q=St.%20Anthony%E2%80%99s%20Hall%2C%20Clontarf%20Rd%2C%20Dublin%203%2C%20D03%20TY23&output=embed"
-                      className="h-full w-full border-0"
-                      title="Map of St. Anthony's Hall, Clontarf"
-                      loading="lazy"
-                      allowFullScreen
-                      referrerPolicy="no-referrer-when-downgrade"
-                    />
-                  </div>
+            <div className="grid gap-3">
+              {offers.map((offer) => (
+                <div
+                  key={offer}
+                  className="rounded-lg border border-[#ddd6c9] bg-white p-5 text-[#26362d]"
+                >
+                  {offer}
                 </div>
-              </ScrollAnimation>
-
-              <ScrollAnimation direction="up" delay={0.8}>
-                <div>
-                  <h3 className="text-lg font-semibold mb-3">The Venue's Entrance</h3>
-                  <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl">
-                    <Image
-                      src="/images/outside-house.webp"
-                      alt="St. Anthony's Hall exterior view from outside"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                  </div>
-                </div>
-              </ScrollAnimation>
+              ))}
             </div>
           </div>
         </section>
 
-        <section className="rounded-2xl bg-amber-50 border border-amber-200 text-gray-900 p-8 sm:p-12 text-center">
-          <ScrollAnimation direction="up" delay={0.2}>
-            <h2 className="text-3xl sm:text-4xl font-semibold mb-4 text-amber-900">
-              Classes Temporarily Paused
-            </h2>
-          </ScrollAnimation>
-          <ScrollAnimation direction="up" delay={0.4}>
-            <p className="text-base sm:text-lg text-amber-800 max-w-2xl mx-auto mb-8">
-              We're taking a short break from our Monday evening classes. For updates on when we'll be back, or if you have any questions about yoga and future sessions, reach out to Mary on Instagram.
+        <section
+          id="social"
+          className="mx-auto grid max-w-6xl gap-8 px-4 py-18 sm:py-24 md:grid-cols-[1fr_auto] md:items-center"
+        >
+          <div>
+            <p className="text-sm font-semibold uppercase text-[#587260]">
+              Follow the work
             </p>
-          </ScrollAnimation>
-          <ScrollAnimation direction="up" delay={0.6}>
-            <Link
-              href="https://instagram.com/come_yogawithmary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                size="lg"
-                className="bg-primary text-background hover:bg-primary/90"
+            <h2 className="mt-3 max-w-2xl text-3xl font-semibold text-[#17211c] sm:text-5xl">
+              Short ideas on burnout, recovery, mind-body practice, and better
+              work.
+            </h2>
+          </div>
+          <div className="flex flex-wrap gap-3 md:justify-end">
+            {socialLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Follow Mary on Instagram
-              </Button>
-            </Link>
-          </ScrollAnimation>
+                <Button variant="outline" className="border-[#bdc8b7]">
+                  {link.label}
+                </Button>
+              </Link>
+            ))}
+          </div>
         </section>
 
-        <section id="contact" className="space-y-6">
-          <ScrollAnimation direction="up" delay={0.2}>
-            <h2 className="text-3xl sm:text-4xl font-semibold">
-              Join Our Community
-            </h2>
-          </ScrollAnimation>
-          <StaggeredAnimation className="space-y-4" staggerDelay={0.1}>
-            <p className="text-base sm:text-lg max-w-prose">
-              We'd love to hear from you! Whether you have questions about our
-              Candlelit Yoga classes, need assistance with bookings, or want to
-              share your feedback, we're here to help.
-            </p>
-            <p className="text-base sm:text-lg max-w-prose">
-              At our Candlelit Yoga class, you'll find yourself in a welcoming
-              space. It's a chance to practice alongside others who share your
-              love for yoga and self-care. Whether you're hoping to unwind after
-              a long day or want to dive deeper into your practice, you'll
-              discover a peaceful and enriching experience here.
-            </p>
-            <p className="text-muted-foreground">
-              These are the best ways to reach us and stay connected:
-            </p>
-          </StaggeredAnimation>
-          <ScrollAnimation direction="up" delay={0.6}>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="https://instagram.com/come_yogawithmary"
-                target="_blank"
-              >
-                <Button>Instagram</Button>
-              </Link>
-
-              <Link
-                href="https://chat.whatsapp.com/CwzzpKBZvPwHMV7gN5vMJl?mode=ems_copy_c"
-                target="_blank"
-              >
-                <Button variant="outline">Join our WhatsApp group</Button>
-              </Link>
-
-              <a href="mailto:charlieward18@gmail.com">
-                <Button variant="outline">Email</Button>
-              </a>
+        <section className="bg-[#dfe7d8]">
+          <div className="mx-auto grid max-w-6xl gap-6 px-4 py-14 md:grid-cols-[0.9fr_1.1fr] md:items-center">
+            <div>
+              <h2 className="text-2xl font-semibold text-[#17211c] sm:text-4xl">
+                Get the Burnout Recovery Reset.
+              </h2>
+              <p className="mt-3 leading-7 text-[#425248]">
+                Five short emails for people who are tired of relying on coping
+                alone.
+              </p>
             </div>
-          </ScrollAnimation>
+            <SignupBlock />
+          </div>
         </section>
       </main>
 
-      <footer className="border-t">
-        <div className="mx-auto max-w-6xl px-4 py-10 text-sm text-muted-foreground">
+      <footer className="border-t border-[#ddd6c9] bg-[#f7f4ee]">
+        <div className="mx-auto grid max-w-6xl gap-4 px-4 py-8 text-sm text-[#5f6d63] md:grid-cols-[1fr_auto]">
+          <p>© {new Date().getFullYear()} Mary Duffy</p>
           <p>
-            © {new Date().getFullYear()} Candlelit Yoga — St. Anthony's Hall,
-            Clontarf
+            Educational content only. Not a substitute for medical or mental
+            health support.
           </p>
         </div>
       </footer>

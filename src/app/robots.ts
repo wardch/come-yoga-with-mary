@@ -1,13 +1,14 @@
-import type {MetadataRoute} from 'next';
+import type { MetadataRoute } from "next";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const base =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://www.comeyogawithmary.com";
   return {
     rules: {
-      userAgent: '*',
-      allow: '/',
+      userAgent: "*",
+      allow: "/",
     },
     sitemap: `${base}/sitemap.xml`,
   };
